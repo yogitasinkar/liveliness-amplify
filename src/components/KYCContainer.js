@@ -9,10 +9,15 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import Button from 'react-bootstrap/Button'
 
+import Liveliness from './Liveliness'
+
 
 export default () => {
 
   const [currentTabKey, setCurrentTabKey] = useState("welcome");
+
+  const [liveTestDetails, setLiveTestDetails] = useState({});
+  const [documentDetails, setDocumentDetails] = useState({});
   
   const startKyc = () => {
     setCurrentTabKey("Liveliness");
@@ -24,6 +29,12 @@ export default () => {
     setCurrentTabKey(eventkey);
   }
 
+  const setTabStatus = (value) => {
+    console.log("current tab value ", value);
+    setCurrentTabKey(value);
+  }
+  
+  
   return (
    <div>
   <Container>
@@ -55,18 +66,20 @@ export default () => {
                     <Button variant="primary" onClick = {startKyc}>Start</Button>
                 </p>
         </Tab>
-        <Tab eventKey="Liveliness" title="Liveliness Test">
+        <Tab eventKey="Liveliness" title="Liveliness Test" disabled>
             <div>
-                Liveliness Check !
+                <Liveliness setTabStatus={setTabStatus} setLiveTestDetails={setLiveTestDetails} />
             </div>
         </Tab>
-        <Tab eventKey="UploadDocs" title="Upload Documents">
+        <Tab eventKey="UploadDocs" title="Upload Documents" disabled>
             <div>
-            Upload Documents
+            
+            
+            
             </div>
         </Tab>
-        <Tab eventKey="AnalysisDetails" title="Details of Analysis">
-            Summary Details
+        <Tab eventKey="AnalysisDetails" title="Details of Analysis" disabled>
+          
         </Tab>
         </Tabs>
     </Col>
