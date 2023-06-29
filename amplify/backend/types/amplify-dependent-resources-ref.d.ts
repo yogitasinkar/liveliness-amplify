@@ -9,5 +9,12 @@ export type AmplifyDependentResourcesAttributes = {
       "UserPoolId": "string",
       "UserPoolName": "string"
     }
+  },
+  "predictions": {
+    "faceId": {
+      "celebrityDetectionEnabled": "string",
+      "maxEntities": "string",
+      "region": "string"
+    }
   }
 }

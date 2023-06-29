@@ -14,6 +14,9 @@
     "categories": {
       "auth": {
         "kycapp9d4e59c8": {}
+      },
+      "predictions": {
+        "faceId": {}
       }
     }
   }
