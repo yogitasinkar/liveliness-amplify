@@ -26,11 +26,22 @@
     }
   },
   "predictions": {
+    "InterpretText": {
+      "interpretType": "interpretText",
+      "providerPlugin": "awscloudformation",
+      "service": "Comprehend"
+    },
     "faceId": {
       "dependsOn": [],
       "identifyType": "identifyEntities",
       "providerPlugin": "awscloudformation",
       "service": "Rekognition"
+    },
+    "textID": {
+      "dependsOn": [],
+      "identifyType": "identifyText",
+      "providerPlugin": "awscloudformation",
+      "service": "RekognitionAndTextract"
     }
   }
 }

@@ -1,0 +1,15 @@
+{
+    "resourceName": "textID",
+    "identifyPolicyName": "identifyPolicyf1645191",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "adminAuthProtected": "DISALLOW",
+    "adminGuestProtected": "DISALLOW",
+    "identifyType": "identifyText",
+    "access": "auth",
+    "type": "ALL"
+}

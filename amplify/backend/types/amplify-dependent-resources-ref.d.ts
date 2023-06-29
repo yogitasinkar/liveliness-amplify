@@ -11,9 +11,17 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "predictions": {
+    "InterpretText": {
+      "region": "string",
+      "type": "string"
+    },
     "faceId": {
       "celebrityDetectionEnabled": "string",
       "maxEntities": "string",
+      "region": "string"
+    },
+    "textID": {
+      "format": "string",
       "region": "string"
     }
   }
