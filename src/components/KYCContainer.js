@@ -55,12 +55,7 @@ export default () => {
         <Tab eventKey="welcome" title="Welcome">
                 <h2 className="tab-element-align">Welcome to video KYC</h2>
                 <div className="tab-element-align">
-                    <p>The KYC process consists of 3 simple steps. </p>
-                    <ul>
-                        <li>Liveliness Detection - The user will do a series of face gestures to determine whether its a live feed</li>
-                        <li>Upload Documents - upload valid ID documents to use for verification.</li>
-                        <li>Validation and summary</li>
-                    </ul>
+                    <p>The KYC process consists of Liveliness Detection - The user will do a series of face gestures to determine whether its a live feed </p>
                 </div>
                 <p className="tab-button-align">
                     <Button variant="primary" onClick = {startKyc}>Start</Button>
@@ -70,16 +65,6 @@ export default () => {
             <div>
                 <Liveliness setTabStatus={setTabStatus} setLiveTestDetails={setLiveTestDetails} />
             </div>
-        </Tab>
-        <Tab eventKey="UploadDocs" title="Upload Documents" disabled>
-            <div>
-            
-            
-            
-            </div>
-        </Tab>
-        <Tab eventKey="AnalysisDetails" title="Details of Analysis" disabled>
-          
         </Tab>
         </Tabs>
     </Col>

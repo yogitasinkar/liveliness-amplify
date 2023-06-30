@@ -36,10 +36,30 @@
     "sharedId": "9d4e59c8",
     "resourceName": "kycapp9d4e59c8",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "default",
+    "useDefault": "defaultSocial",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true
+    "useEnabledMfas": true,
+    "authRoleArn": {
+      "Fn::GetAtt": [
+        "AuthRole",
+        "Arn"
+      ]
+    },
+    "unauthRoleArn": {
+      "Fn::GetAtt": [
+        "UnauthRole",
+        "Arn"
+      ]
+    },
+    "breakCircularDependency": true,
+    "dependsOn": [],
+    "hostedUI": true,
+    "hostedUIDomainName": "kycappbf13b4d2-bf13b4d2",
+    "authProvidersUserPool": [],
+    "hostedUIProviderMeta": "[]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://570b06905c674696ac33e2d2b5898528.vfs.cloud9.ap-south-1.amazonaws.com/\"],\"LogoutURLs\":[\"https://570b06905c674696ac33e2d2b5898528.vfs.cloud9.ap-south-1.amazonaws.com/\"]}",
+    "authProviders": []
   }
 }

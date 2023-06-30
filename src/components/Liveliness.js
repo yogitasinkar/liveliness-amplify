@@ -214,10 +214,8 @@ const videoConstraints = {
                             ref={webcamRef}
                             screenshotFormat="image/jpeg"
                             width={800}
-                            videoConst
-                            raints={videoConstraints}
+                            videoConstraints={videoConstraints}
                         />
-                        
                     </div>
                 }
                 
